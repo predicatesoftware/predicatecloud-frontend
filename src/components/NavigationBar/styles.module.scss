@@ -1,0 +1,78 @@
+.logoImg {
+  position: relative;
+  top: -2px;
+  padding-right: 0.4em;
+}
+
+.inner {
+  max-width: 60em;
+  margin: auto;
+}
+
+.outer {
+  background-color: #fff;
+}
+// @import '../../themes/_colors';
+
+.navbar {
+  min-height: 4em;
+}
+
+.navlink {
+  display: block;
+  position: relative;
+  padding: 0.3em !important;
+  text-decoration: none;
+  text-align: center;
+  color: #777;
+  min-width: 90px;
+
+  &:hover,
+  &:focus {
+    color: #212529;
+    text-decoration: none;
+  }
+
+  &:active {
+    // color: $themeYellow !important;
+  }
+
+  &.active {
+    // color: $themeYellow !important;
+  }
+}
+
+// .dropdown {
+//   border-color: $themeAddOrange !important;
+
+//   &__link {
+//     display: block;
+//     padding: 0.5em;
+//     white-space: nowrap;
+//     text-decoration: none;
+//     color: $themeOrange;
+
+//     &:hover,
+//     &:focus {
+//       color: #fff;
+//       background: $themeAddOrange;
+//       text-decoration: none;
+//     }
+
+//     &:active,
+//     &__active {
+//       color: #fff;
+//       background: $themeAddYellow;
+//     }
+//   }
+
+//   &__header {
+//     padding: 0.5em;
+//     color: #fff;
+//   }
+// }
+
+// .divider {
+//   height: 1px;
+//   background-color: $themeAddOrange;
+// }

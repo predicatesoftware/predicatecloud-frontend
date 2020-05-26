@@ -1,0 +1,28 @@
+h1 {
+  padding: 0.3em;
+  text-align: center;
+}
+
+.wrapper {
+  // border: 2px solid #d3d3d3;
+  // border-radius: 0.5em;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  // margin: 0 2em;
+  width: 300px;
+  // max-width: 300px;
+}
+
+.controls {
+  padding-top: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.secondaryControls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
