@@ -6,6 +6,8 @@ let baseUrl = '/api';
 if (process.env.NODE_ENV !== 'production')
   baseUrl = 'http://localhost:9000' + baseUrl;
 
+axios.defaults.baseURL = baseUrl;
+
 axios.interceptors.response.use(
   (response) => response,
   (error) => {
@@ -14,7 +16,7 @@ axios.interceptors.response.use(
       error.response.status >= 400 &&
       error.response.status < 500;
 
-    if (expectedError) {
+    if (!expectedError) {
       toast.error('An unexpected error occurrred.');
       //   logger.log(error);
     }

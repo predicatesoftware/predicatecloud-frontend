@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { RouteComponentProps, Redirect } from 'react-router-dom';
 import RegisterForm from '../../components/RegisterForm';
 import authService from '../../api/services/authService';

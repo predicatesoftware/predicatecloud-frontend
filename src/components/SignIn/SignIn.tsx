@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { RouteComponentProps, Redirect } from 'react-router-dom';
 import LoginForm from '../../components/LoginForm';
 import authService from '../../api/services/authService';
@@ -13,8 +13,8 @@ export default ({ history }: RouteComponentProps) => {
             src="images/PredicateLogo.png"
             alt="Predicate Cloud"
             title="Predicate Cloud"
-            width="200px"
-            height="200px"
+            width="150px"
+            height="150px"
           />
         </div>
         <LoginForm history={history} />
