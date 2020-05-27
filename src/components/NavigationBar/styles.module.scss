@@ -12,7 +12,6 @@
 .outer {
   background-color: #fff;
 }
-// @import '../../themes/_colors';
 
 .navbar {
   min-height: 4em;
@@ -32,47 +31,8 @@
     color: #212529;
     text-decoration: none;
   }
-
-  &:active {
-    // color: $themeYellow !important;
-  }
-
-  &.active {
-    // color: $themeYellow !important;
-  }
 }
 
-// .dropdown {
-//   border-color: $themeAddOrange !important;
-
-//   &__link {
-//     display: block;
-//     padding: 0.5em;
-//     white-space: nowrap;
-//     text-decoration: none;
-//     color: $themeOrange;
-
-//     &:hover,
-//     &:focus {
-//       color: #fff;
-//       background: $themeAddOrange;
-//       text-decoration: none;
-//     }
-
-//     &:active,
-//     &__active {
-//       color: #fff;
-//       background: $themeAddYellow;
-//     }
-//   }
-
-//   &__header {
-//     padding: 0.5em;
-//     color: #fff;
-//   }
-// }
-
-// .divider {
-//   height: 1px;
-//   background-color: $themeAddOrange;
-// }
+.brand:hover {
+  cursor: pointer;
+}

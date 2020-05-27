@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, RouteComponentProps, withRouter } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -11,26 +11,30 @@ import {
 import styles from './styles.module.scss';
 import authService from '../../api/services/authService';
 
-const user = authService.getCurrentUser();
-const isLoggedIn = user !== null;
-
-const NavigationBar = () => {
+const NavigationBar = (props: RouteComponentProps) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggle = () => setIsOpen(!isOpen);
+
+  const user = authService.getCurrentUser();
+  const isLoggedIn = user !== null;
 
   return (
     <div className={styles.outer}>
       <div className={styles.inner}>
         <Navbar color="white" light expand="md" className={styles.navbar}>
-          <NavbarBrand href="/">
-            <img
-              src="images/PredicateLogo20.png"
-              alt="Company logo"
-              title="Predicate Software"
-              className={styles.logoImg}
-            />
-            Predicate Software
+          <NavbarBrand>
+            <div
+              className={styles.brand}
+              onClick={() => props.history.push('/')}
+            >
+              <img
+                src="images/PredicateLogo20.png"
+                alt="Company logo"
+                title="Predicate Software"
+                className={styles.logoImg}
+              />
+              Predicate Software
+            </div>
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
@@ -59,6 +63,30 @@ const NavigationBar = () => {
                   </NavItem>
                 </>
               )}
+              {isLoggedIn && (
+                <>
+                  {/* <NavItem className="ml-md-auto">
+                    <NavLink
+                      exact
+                      to={'/profile'}
+                      activeClassName={styles.active}
+                      className={styles.navlink}
+                    >
+                      Sign Up
+                    </NavLink>
+                  </NavItem> */}
+                  <NavItem className="ml-md-auto">
+                    <NavLink
+                      exact
+                      to={'/logout'}
+                      activeClassName={styles.active}
+                      className={styles.navlink}
+                    >
+                      Logout
+                    </NavLink>
+                  </NavItem>
+                </>
+              )}
             </Nav>
           </Collapse>
         </Navbar>
@@ -67,4 +95,4 @@ const NavigationBar = () => {
   );
 };
 
-export default NavigationBar;
+export default withRouter(NavigationBar);

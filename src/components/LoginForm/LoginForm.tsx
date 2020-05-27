@@ -23,18 +23,21 @@ export default class LoginForm extends BaseForm<Props> {
       .required()
       .min(8)
       .label('Password')
-      .error((errors) => 'Password should have at least 8 characters.'),
+      .error(() => 'Password should have at least 8 characters.'),
   };
 
   doSubmit = async () => {
     try {
       const { data } = this.state;
       await authService.login(data.email, data.password);
-      this.props.history.push('/');
+      window.location.href = '/';
     } catch (ex) {
       if (ex.response && ex.response.status === 401) {
         this.setState({
-          errors: { ...this.state.errors, email: ex.response.data },
+          errors: {
+            ...this.state.errors,
+            email: ex.response.data || 'Unexpected error.',
+          },
         });
       }
     }

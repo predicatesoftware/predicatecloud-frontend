@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Alert,
-  FormGroup,
-  Label,
-  Input,
-  FormFeedback,
-  InputProps,
-} from 'reactstrap';
+import { FormGroup, Label, Input, InputProps } from 'reactstrap';
 import styles from './styles.module.scss';
 
 export default ({ name, label, error, ...rest }: InputProps) => {
@@ -21,7 +14,6 @@ export default ({ name, label, error, ...rest }: InputProps) => {
         className={styles.input}
       ></Input>
       {error && <div className="alert alert-danger">{error}</div>}
-      {/* <FormFeedback>{error}</FormFeedback> */}
     </FormGroup>
   );
 };

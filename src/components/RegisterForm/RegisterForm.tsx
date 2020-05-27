@@ -26,17 +26,13 @@ export default class RegisterForm extends BaseForm<Props> {
       .required()
       .min(8)
       .label('Password')
-      .error(
-        (errors) => 'Passwords should match and have at least 8 characters.'
-      ),
+      .error(() => 'Passwords should match and have at least 8 characters.'),
     repeatPassword: Joi.string()
       .min(8)
       .valid(this.state.data.password)
       .required()
       .label('Password')
-      .error(
-        (errors) => 'Passwords should match and have at least 8 characters.'
-      ),
+      .error(() => 'Passwords should match and have at least 8 characters.'),
   };
 
   componentDidUpdate() {
@@ -45,9 +41,7 @@ export default class RegisterForm extends BaseForm<Props> {
       .valid(this.state.data.password)
       .required()
       .label('Password')
-      .error(
-        (errors) => 'Passwords should match and have at least 8 characters.'
-      );
+      .error(() => 'Passwords should match and have at least 8 characters.');
   }
 
   doSubmit = async () => {
@@ -56,12 +50,13 @@ export default class RegisterForm extends BaseForm<Props> {
     try {
       const response = await userService.register(user);
       authService.loginWithJwt(response.headers['x-auth-token']);
-      const userId = authService.getCurrentUser()?._id || '';
-      this.props.setSettingsContext(userId);
-      this.props.history.push('/');
+      window.location.href = '/';
     } catch (ex) {
       this.setState({
-        errors: { ...this.state.errors, email: ex.response.data },
+        errors: {
+          ...this.state.errors,
+          email: ex.response.data || 'Unexpected error.',
+        },
       });
     }
   };
