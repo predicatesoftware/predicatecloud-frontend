@@ -9,11 +9,11 @@ import authService from '../../api/services/authService';
 import userService from '../../api/services/userService';
 import { User } from '../../api/models/user';
 
-interface Props {
+interface RegisterFormProps {
   history: History;
   setSettingsContext: (userId: string) => void;
 }
-export default class RegisterForm extends BaseForm<Props> {
+export default class RegisterForm extends BaseForm<RegisterFormProps> {
   state = {
     data: { name: '', email: '', password: '', repeatPassword: '' },
     errors: {},

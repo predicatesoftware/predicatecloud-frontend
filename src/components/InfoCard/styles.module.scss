@@ -1,0 +1,44 @@
+h3 {
+  font-size: 1.5em;
+}
+
+.card_button {
+  border-radius: 0 !important;
+  border-color: #666 !important;
+  border-width: 2px !important;
+  font-size: 1.2rem !important;
+
+  &:hover {
+    border-image-source: linear-gradient(
+      90deg,
+      rgba(102, 153, 255, 1) 0%,
+      rgba(0, 136, 136, 1) 100%
+    );
+    border-image-slice: 1;
+    background-color: transparent !important;
+    color: #333 !important;
+    font-weight: bold;
+  }
+}
+
+.card_container {
+  font-size: 1.3em;
+  padding: 1.5em 1.5em;
+  color: #333;
+  text-align: left;
+  margin: 0 1em;
+  width: 12em;
+  height: 16em;
+  //   border: 2px #666 solid;
+  //   border-radius: 0.75em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 5px solid;
+  border-image-source: linear-gradient(
+    90deg,
+    rgba(102, 153, 255, 1) 0%,
+    rgba(0, 136, 136, 1) 100%
+  );
+  border-image-slice: 60;
+}

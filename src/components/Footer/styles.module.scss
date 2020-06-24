@@ -1,0 +1,35 @@
+.inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 66em;
+  padding: 2em 2em;
+  margin: auto;
+}
+
+.outer {
+  margin-top: 6em;
+  background-color: #fff;
+}
+
+.company_name_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.company_name_wrapper p {
+  margin-left: 1em;
+  margin-bottom: 0;
+}
+
+.company_container {
+  display: flex;
+  flex-direction: row;
+}
+
+.socials_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

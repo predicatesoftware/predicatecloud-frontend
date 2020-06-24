@@ -7,11 +7,11 @@ import BaseForm from '../BaseForm';
 import authService from '../../api/services/authService';
 import { Link } from 'react-router-dom';
 
-interface Props {
+interface LoginFormProps {
   history: History;
 }
 
-export default class LoginForm extends BaseForm<Props> {
+export default class LoginForm extends BaseForm<LoginFormProps> {
   state = {
     data: { email: '', password: '' },
     errors: {},
