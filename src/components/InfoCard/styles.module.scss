@@ -7,6 +7,8 @@ h3 {
   border-color: #666 !important;
   border-width: 2px !important;
   font-size: 1.2rem !important;
+  color: #666 !important;
+  background-color: transparent !important;
 
   &:hover {
     border-image-source: linear-gradient(
@@ -17,7 +19,9 @@ h3 {
     border-image-slice: 1;
     background-color: transparent !important;
     color: #333 !important;
-    font-weight: bold;
+    font-weight: bold !important;
+    font-size: 1.2rem !important;
+    text-decoration: none;
   }
 }
 
@@ -28,9 +32,7 @@ h3 {
   text-align: left;
   margin: 0 1em;
   width: 12em;
-  height: 16em;
-  //   border: 2px #666 solid;
-  //   border-radius: 0.75em;
+  height: 17em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
