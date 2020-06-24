@@ -36,9 +36,9 @@ export default ({ history }: RouteComponentProps) => {
       </div>
       <div className={styles.cards_container}>
         <InfoCard
-          caption="Register your account"
+          caption="Register account"
           buttonCaption="Register now"
-          onClick={() => history.push('/register')}
+          link="/register"
         >
           Get early access to the latest versions of Predicate.ML and
           Predicate.Cloud
@@ -46,10 +46,16 @@ export default ({ history }: RouteComponentProps) => {
         <InfoCard
           caption="Try the library now for free"
           buttonCaption="Try it now"
+          link="/"
         >
           Get familiar with all the new features. Now with C++ 20.
         </InfoCard>
-        <InfoCard caption="Join the community" buttonCaption="Join now">
+        <InfoCard
+          caption="Join the community"
+          buttonCaption="Join now"
+          link="https://twitter.com/predicateinc"
+          isExternal={true}
+        >
           Subscribe to our Twitter account to make sure you don't miss new
           releases.
         </InfoCard>
