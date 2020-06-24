@@ -17,7 +17,9 @@ export interface FormState {
   errors: FormData;
 }
 
-export default abstract class BaseForm<FormProps = any> extends Component<any> {
+export default abstract class BaseForm<BaseFormProps = any> extends Component<
+  any
+> {
   state: FormState = {
     data: {},
     errors: {},

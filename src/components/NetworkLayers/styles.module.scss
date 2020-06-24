@@ -1,0 +1,75 @@
+.layers {
+  margin-left: 3em;
+  margin-top: 1.5em;
+  margin-right: 25em;
+  position: relative;
+}
+
+.layers img {
+  opacity: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.top_layer,
+.middle_layer,
+.bottom_layer {
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-duration: 0.375s;
+}
+
+.top_layer {
+  z-index: 3;
+  animation-name: top_layer_appearance;
+  animation-delay: 0.55s;
+}
+
+.middle_layer {
+  z-index: 2;
+  animation-name: middle_layer_appearance;
+  animation-delay: 0.375s;
+}
+
+.bottom_layer {
+  z-index: 1;
+  animation-name: bottom_layer_appearance;
+  animation-delay: 0.25s;
+}
+
+@keyframes top_layer_appearance {
+  from {
+    margin-top: -55px;
+    opacity: 0;
+  }
+
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes middle_layer_appearance {
+  from {
+    margin-top: 0;
+    opacity: 0;
+  }
+
+  to {
+    margin-top: 55px;
+    opacity: 1;
+  }
+}
+
+@keyframes bottom_layer_appearance {
+  from {
+    margin-top: 55px;
+    opacity: 0;
+  }
+
+  to {
+    margin-top: 110px;
+    opacity: 1;
+  }
+}

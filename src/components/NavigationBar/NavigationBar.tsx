@@ -41,7 +41,7 @@ const NavigationBar = (props: RouteComponentProps) => {
             <Nav className="ml-auto" navbar>
               {!isLoggedIn && (
                 <>
-                  <NavItem className="ml-md-auto border border-secondary rounded">
+                  <NavItem className="pb-1 pt-1 ml-md-auto border border-secondary rounded">
                     <NavLink
                       exact
                       to={'/register'}
@@ -51,7 +51,7 @@ const NavigationBar = (props: RouteComponentProps) => {
                       Sign Up
                     </NavLink>
                   </NavItem>
-                  <NavItem className="ml-md-auto">
+                  <NavItem className="pb-1 pt-1 ml-md-auto">
                     <NavLink
                       exact
                       to={'/login'}
