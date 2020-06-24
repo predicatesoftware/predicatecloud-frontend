@@ -11,7 +11,7 @@ interface SocialButtonProps {
 export default ({ src, alt, link }: SocialButtonProps) => {
   return (
     <div className={styles.social_button_wrapper}>
-      <a href={link} target="_blank">
+      <a href={link} target="_blank" rel="noopener noreferrer">
         <Image src={src} alt={alt} />
       </a>
     </div>
