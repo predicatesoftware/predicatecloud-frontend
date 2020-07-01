@@ -3,7 +3,13 @@
   flex-direction: row;
   justify-content: space-evenly;
   background-color: #fff;
-  border: 2px solid #fff;
+  border: 5px solid;
+  border-image-source: linear-gradient(
+    90deg,
+    rgba(102, 153, 255, 1) 0%,
+    rgba(0, 136, 136, 1) 100%
+  );
+  border-image-slice: 60;
   padding: 4.5em 0;
   margin-top: 6em;
   margin-left: auto;
@@ -14,11 +20,11 @@
   -webkit-box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, 0.15);
   -o-box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, 0.15);
   -ms-box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, 0.15);
-  border-radius: 1.5em;
-  -moz-border-radius: 1.5em;
-  -webkit-border-radius: 1.5em;
-  -o-border-radius: 1.5em;
-  -ms-border-radius: 1.5em;
+  // border-radius: 1.5em;
+  // -moz-border-radius: 1.5em;
+  // -webkit-border-radius: 1.5em;
+  // -o-border-radius: 1.5em;
+  // -ms-border-radius: 1.5em;
 }
 
 .formImage {

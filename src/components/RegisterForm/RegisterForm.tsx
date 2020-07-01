@@ -20,19 +20,27 @@ export default class RegisterForm extends BaseForm<RegisterFormProps> {
   };
 
   schema = {
-    name: Joi.string().required().label('Name'),
-    email: Joi.string().required().email().min(5).label('Email'),
+    name: Joi.string()
+      .required()
+      .label('Ваше имя')
+      .error(() => 'Имя не может быть пустым.'),
+    email: Joi.string()
+      .required()
+      .email()
+      .min(5)
+      .label('Адрес электронной почты')
+      .error(() => 'Адрес электронной почты должен быть корректным.'),
     password: Joi.string()
       .required()
       .min(8)
-      .label('Password')
-      .error(() => 'Passwords should match and have at least 8 characters.'),
+      .label('Пароль')
+      .error(() => 'Пароли должны содержать минимум 8 символов и совпадать.'),
     repeatPassword: Joi.string()
       .min(8)
       .valid(this.state.data.password)
       .required()
-      .label('Password')
-      .error(() => 'Passwords should match and have at least 8 characters.'),
+      .label('Пароль')
+      .error(() => 'Пароли должны содержать минимум 8 символов и совпадать.'),
   };
 
   componentDidUpdate() {
@@ -40,8 +48,8 @@ export default class RegisterForm extends BaseForm<RegisterFormProps> {
       .min(8)
       .valid(this.state.data.password)
       .required()
-      .label('Password')
-      .error(() => 'Passwords should match and have at least 8 characters.');
+      .label('Пароль')
+      .error(() => 'Пароли должны содержать минимум 8 символов и совпадать.');
   }
 
   doSubmit = async () => {
@@ -50,7 +58,7 @@ export default class RegisterForm extends BaseForm<RegisterFormProps> {
     try {
       const response = await userService.register(user);
       authService.loginWithJwt(response.headers['x-auth-token']);
-      window.location.href = '/';
+      this.props.history.push('/');
     } catch (ex) {
       this.setState({
         errors: {
@@ -65,29 +73,24 @@ export default class RegisterForm extends BaseForm<RegisterFormProps> {
     return (
       <div className={styles.wrapper}>
         <Form onSubmit={this.handleSubmit}>
-          {this.renderInputField('name', 'Name', 'John Doe')}
+          {this.renderInputField('name', 'Ваше имя', 'John Doe')}
           {this.renderInputField(
             'email',
-            'Email',
+            'Адрес электронной почты',
             'email@predicatesoftware.com'
           )}
-          {this.renderInputField(
-            'password',
-            'Password',
-            '********',
-            'password'
-          )}
+          {this.renderInputField('password', 'Пароль', 'password')}
           {this.renderInputField(
             'repeatPassword',
-            'Repeat password',
+            'Повторите пароль',
             '********',
             'password'
           )}
           <div className={styles.controls}>
-            <Link to="/login" className="btn btn-link">
-              I forgot my password
+            <Link to="/" className="btn btn-link">
+              Я забыл свой пароль
             </Link>
-            {this.renderButton('Sign up')}
+            {this.renderButton('Создать')}
           </div>
         </Form>
       </div>

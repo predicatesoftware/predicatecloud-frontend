@@ -41,14 +41,14 @@ const NavigationBar = (props: RouteComponentProps) => {
             <Nav className="ml-auto" navbar>
               {!isLoggedIn && (
                 <>
-                  <NavItem className="pb-1 pt-1 ml-md-auto border border-secondary rounded">
+                  <NavItem className="p-1 ml-md-auto border border-secondary rounded">
                     <NavLink
                       exact
                       to={'/register'}
                       activeClassName={styles.active}
                       className={styles.navlink}
                     >
-                      Sign Up
+                      Регистрация
                     </NavLink>
                   </NavItem>
                   <NavItem className="pb-1 pt-1 ml-md-auto">
@@ -58,23 +58,23 @@ const NavigationBar = (props: RouteComponentProps) => {
                       activeClassName={styles.active}
                       className={styles.navlink}
                     >
-                      Sign In
+                      Вход
                     </NavLink>
                   </NavItem>
                 </>
               )}
               {isLoggedIn && (
                 <>
-                  {/* <NavItem className="ml-md-auto">
+                  <NavItem className="ml-md-auto">
                     <NavLink
                       exact
-                      to={'/profile'}
+                      to={'/me'}
                       activeClassName={styles.active}
                       className={styles.navlink}
                     >
-                      Sign Up
+                      {user?.name}
                     </NavLink>
-                  </NavItem> */}
+                  </NavItem>
                   <NavItem className="ml-md-auto">
                     <NavLink
                       exact
@@ -82,7 +82,7 @@ const NavigationBar = (props: RouteComponentProps) => {
                       activeClassName={styles.active}
                       className={styles.navlink}
                     >
-                      Logout
+                      Выход
                     </NavLink>
                   </NavItem>
                 </>
