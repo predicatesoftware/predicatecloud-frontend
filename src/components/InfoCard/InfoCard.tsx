@@ -9,7 +9,7 @@ interface InfoCardProps {
   buttonCaption: string;
   children: React.ReactNode;
   link: string;
-  isExternal?: boolean;
+  external?: boolean;
   onClick?: () => void;
 }
 
@@ -17,9 +17,8 @@ export default ({
   caption,
   buttonCaption,
   children,
-  isExternal,
+  external: isExternal,
   link,
-  onClick,
 }: InfoCardProps) => {
   const history = useHistory();
 

@@ -18,19 +18,24 @@ export default class LoginForm extends BaseForm<LoginFormProps> {
   };
 
   schema = {
-    email: Joi.string().required().email().min(5).label('Email'),
+    email: Joi.string()
+      .required()
+      .email()
+      .min(5)
+      .label('Адрес электронной почты')
+      .error(() => 'Адрес электронной почты должен быть корректным.'),
     password: Joi.string()
       .required()
       .min(8)
-      .label('Password')
-      .error(() => 'Password should have at least 8 characters.'),
+      .label('Пароль')
+      .error(() => 'Пароль должен содержать минимум 8 символов.'),
   };
 
   doSubmit = async () => {
     try {
       const { data } = this.state;
       await authService.login(data.email, data.password);
-      window.location.href = '/';
+      this.props.history.push('/');
     } catch (ex) {
       if (ex.response && ex.response.status === 401) {
         this.setState({
@@ -52,17 +57,12 @@ export default class LoginForm extends BaseForm<LoginFormProps> {
             'Email',
             'email@predicatesoftware.com'
           )}
-          {this.renderInputField(
-            'password',
-            'Password',
-            '********',
-            'password'
-          )}
+          {this.renderInputField('password', 'Пароль', '********', 'password')}
           <div className={styles.controls}>
             <Link to="/login" className="btn btn-link">
-              I forgot my password
+              Я забыл свой пароль
             </Link>
-            {this.renderButton('Sign In')}
+            {this.renderButton('Войти')}
           </div>
         </Form>
       </div>

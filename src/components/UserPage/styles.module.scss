@@ -1,0 +1,13 @@
+.user_page_wrapper {
+  margin-top: 2em;
+}
+
+.nav_wrapper {
+  border-bottom: 2px solid !important;
+  border-image-source: linear-gradient(
+    90deg,
+    rgba(102, 153, 255, 1) 0%,
+    rgba(0, 136, 136, 1) 100%
+  ) !important;
+  border-image-slice: 60 !important;
+}

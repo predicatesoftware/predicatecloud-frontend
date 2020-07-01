@@ -18,20 +18,20 @@ h3 {
     );
     border-image-slice: 1;
     background-color: transparent !important;
-    color: #333 !important;
-    font-weight: bold !important;
+    color: #000 !important;
     font-size: 1.2rem !important;
     text-decoration: none;
   }
 }
 
 .card_container {
+  background-color: #fff;
   font-size: 1.3em;
   padding: 1.5em 1.5em;
   color: #333;
   text-align: left;
   margin: 0 1em;
-  width: 12em;
+  width: 13em;
   height: 17em;
   display: flex;
   flex-direction: column;
@@ -43,4 +43,9 @@ h3 {
     rgba(0, 136, 136, 1) 100%
   );
   border-image-slice: 60;
+  box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, 0.15);
 }

@@ -2,62 +2,61 @@ import React from 'react';
 import styles from './styles.module.scss';
 import NetworkLayers from './../NetworkLayers';
 import InfoCard from './../InfoCard/index';
-import { RouteComponentProps } from 'react-router-dom';
 
-export default ({ history }: RouteComponentProps) => {
+export default () => {
   return (
     <>
-      <h2 className={styles.cl}>Meet Predicate.Cloud</h2>
+      <h2>Встречайте Predicate.Cloud</h2>
       <h1>
-        Machine learning
+        Машинное обучение
         <br />
-        at the <span>speed of light</span>.
+        со <span>скоростью света</span>
       </h1>
       <div className={styles.features_container}>
         <div className={styles.features}>
           <p>
-            Unprecedented performance
+            Непревзойдённая производительность
             <br />
-            for your most demanding tasks.
+            для самых сложных задач.
           </p>
           <p>
-            Most advanced tools in the field of
+            Передовые инструменты в&nbsp;области
             <br />
-            Machine Learning and Data Science.
+            машинного обучения и&nbsp;Data Science.
           </p>
           <p>
-            Intuitive model building and training
+            Интуитивное построение и&nbsp;обучение моделей
             <br />
-            with a level of performance never seen before.
+            с&nbsp;визуализацией процесса.
           </p>
-          <p>Adjustable to projects of any complexity.</p>
+          <p>Адаптация к&nbsp;проектам любой сложности.</p>
         </div>
         <NetworkLayers />
       </div>
       <div className={styles.cards_container}>
         <InfoCard
-          caption="Register account"
-          buttonCaption="Register now"
+          caption="Создайте аккаунт"
+          buttonCaption="Создать"
           link="/register"
         >
-          Get early access to the latest versions of Predicate.ML and
-          Predicate.Cloud
+          Получите ранний доступ к&nbsp;последним версиям библиотек Predicate.ML
+          и&nbsp;Predicate.KMeans.
         </InfoCard>
         <InfoCard
-          caption="Try the library now for free"
-          buttonCaption="Try it now"
-          link="/"
+          caption="Используйте библиотеки"
+          buttonCaption="Попробовать"
+          link="https://github.com/predicatesoftware"
+          external
         >
-          Get familiar with all the new features. Now with C++ 20.
+          Ознакомьтесь с&nbsp;особенностями проекта. Теперь на&nbsp;C++&nbsp;20.
         </InfoCard>
         <InfoCard
-          caption="Join the community"
-          buttonCaption="Join now"
+          caption="Вступите в&nbsp;команду"
+          buttonCaption="Вступить"
           link="https://twitter.com/predicateinc"
-          isExternal={true}
+          external
         >
-          Subscribe to our Twitter account to make sure you don't miss new
-          releases.
+          Подпишитесь на&nbsp;наши новости, чтобы&nbsp;не упустить обновления.
         </InfoCard>
       </div>
     </>

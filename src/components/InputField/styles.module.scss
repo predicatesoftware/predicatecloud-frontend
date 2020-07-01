@@ -6,7 +6,13 @@
   border-radius: 0;
 
   &:focus {
-    border-bottom: 1px solid #000 !important;
+    border-bottom: 1px solid !important;
+    border-image-source: linear-gradient(
+      90deg,
+      rgba(102, 153, 255, 1) 0%,
+      rgba(0, 136, 136, 1) 100%
+    );
+    border-image-slice: 60;
     border-color: inherit;
     -webkit-box-shadow: none;
     box-shadow: none;
