@@ -1,2 +1,5 @@
-*.tsx linguist-language=TypeScript
-index.html linguist-vendored=true
+* linguist-vendored
+*.js linguist-vendored=false
+*.ts linguist-vendored=false
+*.tsx linguist-vendored=false
+*.scss linguist-vendored=false
