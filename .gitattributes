@@ -3,3 +3,4 @@
 *.ts linguist-vendored=false
 *.tsx linguist-vendored=false
 *.scss linguist-vendored=false
+*.tsx linguist-language=TypeScript
