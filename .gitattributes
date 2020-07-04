@@ -4,3 +4,4 @@
 *.tsx linguist-vendored=false
 *.scss linguist-vendored=false
 *.tsx linguist-language=TypeScript
+src/fonts/* linguist-vendored=true
