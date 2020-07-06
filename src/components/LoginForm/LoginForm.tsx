@@ -59,7 +59,7 @@ export default class LoginForm extends BaseForm<LoginFormProps> {
           )}
           {this.renderInputField('password', 'Пароль', '********', 'password')}
           <div className={styles.controls}>
-            <Link to="/login" className="btn btn-link">
+            <Link to="/login" className="btn btn-link pl-1">
               Я забыл свой пароль
             </Link>
             {this.renderButton('Войти')}

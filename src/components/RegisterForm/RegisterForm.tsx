@@ -79,7 +79,7 @@ export default class RegisterForm extends BaseForm<RegisterFormProps> {
             'Адрес электронной почты',
             'email@predicatesoftware.com'
           )}
-          {this.renderInputField('password', 'Пароль', 'password')}
+          {this.renderInputField('password', 'Пароль', '********')}
           {this.renderInputField(
             'repeatPassword',
             'Повторите пароль',
@@ -87,7 +87,7 @@ export default class RegisterForm extends BaseForm<RegisterFormProps> {
             'password'
           )}
           <div className={styles.controls}>
-            <Link to="/" className="btn btn-link">
+            <Link to="/" className="btn btn-link pl-1">
               Я забыл свой пароль
             </Link>
             {this.renderButton('Создать')}
