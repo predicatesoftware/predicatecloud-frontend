@@ -5,7 +5,9 @@ import styles from './styles.module.scss';
 export default ({ name, label, error, ...rest }: InputProps) => {
   return (
     <FormGroup>
-      <Label for={name}>{label}</Label>
+      <Label className={styles.label} for={name}>
+        {label}
+      </Label>
       <Input
         {...rest}
         name={name}
