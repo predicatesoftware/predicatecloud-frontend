@@ -3,12 +3,12 @@ h3 {
 }
 
 .card_button {
-  border-radius: 0 !important;
-  border-color: #666 !important;
-  border-width: 2px !important;
-  font-size: 1.2rem !important;
-  color: #666 !important;
-  background-color: transparent !important;
+  border-radius: 0;
+  border-color: #666;
+  border-width: 2px;
+  font-size: 1.2rem;
+  color: #666;
+  background-color: transparent;
 
   &:hover {
     border-image-source: linear-gradient(
@@ -17,9 +17,9 @@ h3 {
       rgba(0, 136, 136, 1) 100%
     );
     border-image-slice: 1;
-    background-color: transparent !important;
-    color: #000 !important;
-    font-size: 1.2rem !important;
+    background-color: transparent;
+    color: #000;
+    font-size: 1.2rem;
     text-decoration: none;
   }
 }
